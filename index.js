@@ -1,6 +1,6 @@
 //* ForEach
 //* Filter
-// Map
+//* Map
 // sort
 // reduce
 
@@ -46,9 +46,35 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 //     }
 // });
 
-const retailCompines = companines.filter(company => company.category === 'Retail')
+// const retailCompines = companines.filter(company => company.category === 'Retail')
 
-const companiesFrom80s = companines.filter(company => company.start >= 1980 && company.start < 1990)
+// const companiesFrom80s = companines.filter(company => company.start >= 1980 && company.start < 1990)
 
-const moreThan10 = companines.filter(company => company.end - company.start >= 10)
-console.log(moreThan10);
+// const moreThan10 = companines.filter(company => company.end - company.start >= 10)
+// console.log(moreThan10);
+
+// MAP
+// create array of company names
+// const companyNames = companines.map(function(company) {
+//     return `${company.name} => ${company.start} - ${company.end}`;
+// });
+
+// const companyes = companines.map(company => `${company.name}`);
+
+// console.log(companyes);
+
+//Sort
+// const sortedCompanies = companines.sort(function(c1, c2){
+//     if(c1.start > c2.start){
+//         return 1;
+//     } else {
+//         return -1;
+//     }
+// });
+
+const sortedCompanies = companines.sort((a, b) => (a.start > b.start ? 1: -1));
+
+const sortAges = ages.sort((a, b) => b-a);
+
+
+console.log(sortAges);
